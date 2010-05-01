@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+ * @category   ZendServer
+ * @package    ZendServer_JobQueue
+ * @author     ModuleCreator
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+ -->
+<config>
+    <modules>
+        <ZendServer_JobQueue>
+            <version>0.2.0</version>
+		    <jobqueue>
+				<url>http://magento.local/jobqueue</url>
+			</jobqueue>
+        </ZendServer_JobQueue>
+    </modules>
+    <frontend>
+        <routers>
+            <jobqueue>
+                <use>standard</use>
+                <args>
+                    <module>ZendServer_JobQueue</module>
+                    <frontName>jobqueue</frontName>
+                </args>
+            </jobqueue>
+        </routers>
+       </frontend>
+</config>
